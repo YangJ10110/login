@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: pink;
+        cursor: url(cursor.png), auto;
+      }
+
+      #container {
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        padding: 20px;
+        border-radius: 2vh;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      #card {
+        padding: 400px;
+        background: white;
+        align-self: center;
+        justify-self: center;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #label {
+        margin-top: 250px;
+        margin-bottom: 50px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 3vh;
+        font-style: italic;
+      }
+      #datelabel,
+      #namelabel {
+        display: block;
+        margin-right: 40px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding-left: 10px;
+        font-size: 2vh;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-align: center;
+      }
+      #date,
+      #name {
+        display: block;
+        width: 70%;
+        height: 100px;
+        margin: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 2px solid #ccc;
+        border-radius: 0.5vh;
+        font-size: 2vh;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-align: center;
+      }
+      #button {
+        margin: 50px 40px 250px 40px;
+      }
+      #myButton {
+        width: 1000px;
+        box-shadow: 3px 12px 16px -11px #276873;
+        background-color: #d6a3c0;
+        border-radius: 9px;
+        cursor: pointer;
+        color: #ffffff;
+        margin-top: 20px;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 2vh;
+        padding: 30px 220px;
+        text-decoration: none;
+      }
+
+      #myButton:hover {
+        background-color: #bf6196;
+      }
+
+      #myButton:active {
+        position: relative;
+        top: 1px;
+      }
+
+      @media only screen and (max-width: 414px) {
+        body {
+          background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="card">
+        <div id="label">BABY ELYSIA VERIFICATION</div>
+        <br />
+        <label for="date" id="datelabel">Anniversary:</label>
+        <input type="date" id="date" placeholder="Our Anniversary" />
+        <br />
+        <label for="name" id="namelabel">Something you only now:</label>
+        <input type="text" id="name" placeholder="the call sign I don't like" />
+        <br />
+        <div id="button">
+          <a href="#" id="myButton">VERIFY</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("myButton")
+        .addEventListener("click", function () {
+          var dateInput = document.getElementById("date").value;
+          var nameInput = document.getElementById("name").value;
+
+          if (dateInput === "2021-10-15" && nameInput === "babe") {
+            window.location.href =
+              "file:///C:/Users/Jerome%20Yang/Desktop/FrontEnd%20Practice/Anniversary%20Gift/FrontPage.html";
+          } else {
+            alert("Wrong");
+          }
+        });
+
+      //         <a href="#" class="myButton">VERIFY</a>
+    </script>
+  </body>
+</html>
